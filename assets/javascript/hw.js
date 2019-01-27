@@ -6,10 +6,6 @@ var animalsArr = ["fox", "cat", "pig", "tiger", "cheetah",
                   "goat", "horse", "cow", "alligator", "kangaroo",
                   "panda", "koala", "deer", "elephant", "racoon", "squirrel"];
 
-// ----- Helper Functions ----- //
-
-// renderButtons will display the animal buttons for all animals within the
-// animalsArr array.
 function renderButtons() {
   // Empty the buttons panel before redrawing it
   $("#buttonPanel").empty();
@@ -29,7 +25,6 @@ function renderButtons() {
 
 // ----- Event Handlers ----- //
 
-// An event handler for the user form to add additional animals to the array
 $("#add-animal").on("click", function(event) {
   event.preventDefault();
 
@@ -52,7 +47,7 @@ function fetchAnimalGifs() {
 
   // Construct the Giphy URL
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animalStr + 
-                 "&rating=pg-13&limit=20&api_key=8NLyMxmII85F2gw9Dx0VOX3Fg26xKRhp";
+                 "&rating=pg-13&limit=10&api_key=8NLyMxmII85F2gw9Dx0VOX3Fg26xKRhp";
 
   // Make the AJAX call to the Giphy API
   $.ajax({
